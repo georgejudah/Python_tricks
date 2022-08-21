@@ -1,0 +1,39 @@
+# Python adds an implicit return None statement to the end of any
+# function. Therefore, if a function doesn’t specify a return value, it returns None by default
+
+# This means you can replace return None statements with bare
+# return statements or even leave them out completely and still get
+# the same result:
+
+# def foo1(value):
+#     if value:
+#         return value
+#     else:
+#         return None
+# def foo2(value):
+# """Bare return statement implies `return None`"""
+#     if value:
+#         return value
+#     else:
+#         return
+# def foo3(value):
+# """Missing return statement implies `return None`"""
+#     if value:
+#         return value
+
+
+# Now, when is it a good idea to use this feature in your own Python
+# code?
+# My rule of thumb is that if a function doesn’t have a return value (other
+# languages would call this a procedure), then I will leave out the return
+# statement. Adding one would just be superfluous and confusing. An
+# example for a procedure would be Python’s built-in print function
+# which is only called for its side-effects (printing text) and never for its
+# return value
+
+
+# Key Takeaways
+# • If a function doesn’t specify a return value, it returns None.
+# Whether to explicitly return None is a stylistic decision.
+# • This is a core Python feature but your code might communicate
+# its intent more clearly with an explicit return None statement.
